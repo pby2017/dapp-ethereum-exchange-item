@@ -8,26 +8,39 @@ Accounts.ui.config({
   }]*/
 
   extraSignupFields: [{
-        fieldName: 'firstname',
-        fieldLabel: 'First name',
+        fieldName: 'name',
+        fieldLabel: 'name',
         inputType: 'text',
         visible: true,
         validate: function(value, errorFunction) {
           if (!value) {
-            errorFunction("Please write your first name");
+            errorFunction("Please write your name");
             return false;
           } else {
             return true;
           }
         }
     }, {
-        fieldName: 'lastname',
-        fieldLabel: 'Last name',
+        fieldName: 'address',
+        fieldLabel: 'Address',
         inputType: 'text',
         visible: true,
+        validate: function(value, errorFunction) {
+          if (!value) {
+            errorFunction("Please write your address");
+            return false;
+          } else {
+            return true;
+          }
+        }
     }, {
+          fieldName: 'bankname',
+          fieldLabel: 'Bank name',
+          inputType: 'text',
+          visible: true
+      }, {
           fieldName: 'accountnumber',
-          fieldLabel: 'Wallet address',
+          fieldLabel: 'Account number',
           inputType: 'text',
           visible: true,
           validate: function(value, errorFunction) {

@@ -1,0 +1,27 @@
+<template name="main">
+  <div class="container-fluid">
+    <div class="row">
+      사진
+    </div>
+
+    <div class="row">
+      <div class="">
+        {{>xboard}}
+        {{#if currentUser}}
+
+        {{/if}}
+      </div>
+
+      <div class="container-fluid" align="right">
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="nav navbar-nav navbar-right">
+            <li>{{> loginButtons align="right"}}</li>
+          </ul>
+        </div>
+        {{#if currentUser}}
+        <div class="row"><button type="button" name="myPageBtn">MY PAGE</button></div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>

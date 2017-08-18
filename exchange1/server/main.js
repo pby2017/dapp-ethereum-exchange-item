@@ -5,10 +5,10 @@ RegItem = new Mongo.Collection("regItem");
 Meteor.startup(() => {
   // code to run on server at startup
   if(RegItem.find().count() == 0 ){
-    RegItem.insert({no: 1, name: "a", email: "a@a.com"});
-    RegItem.insert({no: 2, name: "b", email: "b@b.com"});
-    RegItem.insert({no: 3, name: "c", email: "c@c.com"});
-    RegItem.insert({no: 4, name: "d", email: "d@d.com"});
+    RegItem.insert({no: 1, itemname: "item1", name: "abc", status: "ing", contents: "test"});
+    RegItem.insert({no: 2, itemname: "item2", name: "def", status: "no", contents: "test"});
+    RegItem.insert({no: 3, itemname: "item3", name: "ghi", status: "no", contents: "test"});
+    RegItem.insert({no: 4, itemname: "item4", name: "jkl", status: "ing", contents: "test"});
   }
 });
 
