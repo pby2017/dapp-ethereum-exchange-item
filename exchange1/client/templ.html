@@ -1,0 +1,54 @@
+<template name="header">
+  {{>xboard}}
+  {{>xloginBox}}
+  {{#if currentUser}}
+
+  {{/if}}
+</template>
+
+<template name="xboard">
+  {{>registerItem}}
+<table border="1">
+  {{#each xboardList}}
+    {{>xboardItem}}
+  {{/each}}
+</table>
+</template>
+
+<template name="xboardItem">
+  <tr>
+    <td>{{no}}</td>
+    <td>{{name}}</td>
+    <td>{{email}}</td>
+  </tr>
+</template>
+
+<template name="xloginBox">
+  <p>{{image}}</p>
+  <ul class="nav navbar-nav navbar-right">
+    <li>{{> loginButtons}}</li>
+  </ul>
+  <button type="button" name="myPageBtn">MY PAGE</button>
+</template>
+
+<template name="mypage">
+  <ul>
+    <li>first name : {{firstName}}</li>
+    <li>last name : {{lastName}}</li>
+    <li>account number : {{accountNumber}}</li>
+  </ul>
+  <button type="button" name="infoModify">MODIFY</button>
+</template>
+
+<template name="infomodify">
+  <ul>
+    <li><input type="text" name="fNModify" placeholder={{firstName}}></li>
+    <li><input type="text" name="lNModify" placeholder={{lastName}}></li>
+    <li><input type="text" name="aNModify" placeholder={{accountNumber}}></li>
+  </ul>
+  <button type="button" name="infoConfirm">CONFIRM</button>
+</template>
+
+<template name="registerItem">
+  <button type="button" name="regBtn">REGISTER</button>
+</template>
